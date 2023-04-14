@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SmNavbarItem = () => {
     return (
         <div>
-            <div className='p-3 bg-cyan-500 flex justify-between'>
+            <div className='p-3 bg-[#1565c0] flex justify-between'>
                 <div className='flex gap-2 my-auto text-xl text-white'>
                     <FaFacebookF></FaFacebookF>
                     <FaTwitter></FaTwitter>
