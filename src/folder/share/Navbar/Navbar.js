@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className=' w-full'>
+        <div className=' w-full border-b-2'>
             <TopNavbar></TopNavbar>
             <nav className=' w-full'>
                 <div className='container mx-auto flex justify-between text-lg font-bold'>

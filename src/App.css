@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.TopBanner {
+  min-height: 90vh;
+  min-width: 100%;
+  background-image: url('https://www.malvernroadmedical.com.au/wp-content/uploads/2014/03/womens-health.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +40,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
