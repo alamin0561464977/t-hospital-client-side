@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../share/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import SmNavbarItem from '../../share/Navbar/SmNavbarItem';
+import Footer from '../../share/Footer/Footer';
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
                     {/* <!-- Page content here --> */}
                     <Navbar></Navbar>
                     <Outlet></Outlet>
+                    <Footer></Footer>
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
