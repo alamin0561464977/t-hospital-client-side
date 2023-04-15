@@ -51,6 +51,7 @@ const BookAppointment = () => {
                     </div>
                     <button className="btn font-bold text-lg mt-4">Submit from</button>
                 </div>
+                <h1 className='mt-10 text-center'>Please fill out all of the fields correctly. Your records will be saved in our database securely.</h1>
             </section>
         </div>
     );
