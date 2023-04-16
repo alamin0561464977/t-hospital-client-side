@@ -15,8 +15,8 @@ const Login = () => {
                     <label className='font-bold'>Password</label><br />
                     <input className=' py-4 px-2 w-full border-2 border-[#1565c0] text-[#1565c0] font-bold text-lg' placeholder='Inter Password' type="password" />
                 </div>
-                <Link className=' font-bold mt-4 text-[#1b84fd]'>Signup</Link>
-                <input type="submit" value="Submit" className=' py-4 w-full bg-[#1565c0] hover:bg-[#1053a0] mt-5 text-lg font-bold text-white cursor-pointer' />
+                <Link to='/sign-up' className=' font-bold mt-4 text-[#1b84fd]'>SignUp</Link>
+                <input type="submit" value="Login" className=' py-4 w-full bg-[#1565c0] hover:bg-[#1053a0] mt-5 text-lg font-bold text-white cursor-pointer' />
                 <div className="divider">OR</div>
                 <button className=' text-xl font-bold text-white bg-slate-600 w-full py-4 hover:bg-slate-700 cursor-pointer'>Google</button>
             </form>
