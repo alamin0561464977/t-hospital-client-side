@@ -3,7 +3,6 @@
 }
 
 .TopBanner {
-  min-height: 90vh;
   min-width: 100%;
   background-image: url('https://www.malvernroadmedical.com.au/wp-content/uploads/2014/03/womens-health.jpg');
   background-repeat: no-repeat;
@@ -12,14 +11,15 @@
 
 .Footer {
   min-width: 100%;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPv-sN4F5NnK2usuG_Dv2qYR0lhvyD1-f4YLrKjV5PzR4F3GNR8dXxtJTP9yX_ZMOs5c&usqp=CAU');
-  background-repeat: no-repeat;
+  background-color: black;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPv-sN4F5NnK2usuG_Dv2qYR0lhvyD1-f4YLrKjV5PzR4F3GNR8dXxtJTP9yX_ZMOs5c&usqp=CAU');
+  background-repeat: no-repeat; */
   background-size: 100%;
 }
 
 .GoogleMapsImg {
   min-height: 100vh;
-  min-width: 100vh;
+  /* min-width: 100vh; */
   background-size: 100%;
 }
 

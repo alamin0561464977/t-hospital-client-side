@@ -40,7 +40,7 @@ const Navbar = () => {
                         <Link>Services</Link>
                         <Link>Blogs</Link>
                         <Link>Contact</Link>
-                        <Link>Login</Link>
+                        <Link to='/login'>Login</Link>
                         <div className="avatar">
                             <div className="w-12 rounded-full">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&usqp=CAU" />

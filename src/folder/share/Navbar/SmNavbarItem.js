@@ -58,7 +58,7 @@ const SmNavbarItem = () => {
                         <Link>Contact</Link><br />
                     </div>
                     <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link>Login</Link>
+                        <Link to='/login'>Login</Link>
                     </div>
                 </div>
             </div>
