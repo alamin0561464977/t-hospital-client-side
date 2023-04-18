@@ -9,6 +9,14 @@
   background-size: 100%;
 }
 
+.Events {
+  min-width: 100%;
+  height: 200px;
+  background-image: url('https://demo2.themewarrior.com/hospitalplus/wp-content/themes/hospitalplus/images/header/header.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .Footer {
   min-width: 100%;
   background-color: black;

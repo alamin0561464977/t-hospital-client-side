@@ -1,3 +1,4 @@
+import Events from "../pages/Events/Events";
 import Gallery from "../pages/GalleryPage/Gallery";
 import Home from "../pages/HomePage/Home/Home";
 import Login from "../pages/LoginPage/Login";
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: '/sign-up',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/events',
+                element: <Events></Events>
             }
         ]
     }

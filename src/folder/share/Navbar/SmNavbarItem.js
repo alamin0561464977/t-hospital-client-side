@@ -52,6 +52,9 @@ const SmNavbarItem = () => {
                         <Link>Services</Link><br />
                     </div>
                     <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
+                        <Link to='/events'>Events</Link><br />
+                    </div>
+                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
                         <Link>Blogs</Link><br />
                     </div>
                     <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
