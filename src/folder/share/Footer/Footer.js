@@ -14,7 +14,7 @@ const Footer = () => {
                 <h1 className='border-b-4 border-white text-xl font-bold'>Menu</h1>
                 <div className=' flex flex-col mt-4 gap-3'>
                     <Link className=' text-lg font-bold border-b-2 hover:border-[#1565c0]' to='/'>Home</Link>
-                    <Link className=' text-lg font-bold border-b-2 hover:border-[#1565c0]' to='/'>Services</Link>
+                    <Link className=' text-lg font-bold border-b-2 hover:border-[#1565c0]' to='/services'>Services</Link>
                     <Link className=' text-lg font-bold border-b-2 hover:border-[#1565c0]' to='/'>Gallery</Link>
                     <Link className=' text-lg font-bold border-b-2 hover:border-[#1565c0]' to='/'>Blogs</Link>
                 </div>
