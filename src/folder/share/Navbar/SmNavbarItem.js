@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPinterest, FaYoutube, FaChevronDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contextAPI/userContext';
 
 const SmNavbarItem = () => {
+    const { user, logout } = useContext(AuthContext);
     return (
         <div>
             <div className='p-3 bg-[#1565c0] flex justify-between'>
@@ -14,11 +17,13 @@ const SmNavbarItem = () => {
                     <FaPinterest></FaPinterest>
                     <FaYoutube></FaYoutube>
                 </div>
-                <div className="avatar">
-                    <div className="w-12 rounded-full">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&usqp=CAU" />
-                    </div>
-                </div>
+                {
+                    user?.uid ? <div className="avatar">
+                        <div className="w-12 rounded-full">
+                            <img src={user?.photoURL} alt="" />
+                        </div>
+                    </div> : ''
+                }
             </div>
             <div>
                 <div className=' justify-items-center my-auto lg:flex gap-3'>
@@ -61,7 +66,10 @@ const SmNavbarItem = () => {
                         <Link>Contact</Link><br />
                     </div>
                     <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link to='/login'>Login</Link>
+                        {
+                            user?.uid ? <Link><button onClick={() => logout()}>Log Out</button></Link> :
+                                <Link to='/login'>Login</Link>
+                        }
                     </div>
                 </div>
             </div>

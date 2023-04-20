@@ -2,10 +2,14 @@ import React from 'react';
 import TopNavbar from '../TopNavbar/TopNavbar';
 import { FaClinicMedical, FaAlignLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contextAPI/userContext';
 
 
 
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext);
+    console.log(user)
     return (
         <div className=' w-full border-b-2'>
             <TopNavbar></TopNavbar>
@@ -41,13 +45,17 @@ const Navbar = () => {
                         <Link to='/events'>Events</Link>
                         <Link>Blogs</Link>
                         <Link>Contact</Link>
-                        <Link to='/login'>Login</Link>
-                        <div className="avatar">
-                            <div className="w-12 rounded-full">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&usqp=CAU" />
-                            </div>
-                        </div>
-
+                        {
+                            user?.uid ? <Link><button onClick={() => logout()}>Log Out</button></Link> :
+                                <Link to='/login'>Login</Link>
+                        }
+                        {
+                            user?.uid ? <div className="avatar">
+                                <div className="w-12 rounded-full">
+                                    <img src={user?.photoURL} alt="" />
+                                </div>
+                            </div> : ''
+                        }
                     </div>
                 </div>
             </nav>

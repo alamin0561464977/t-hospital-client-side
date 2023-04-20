@@ -3,14 +3,28 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contextAPI/userContext';
+import { updateProfile } from 'firebase/auth';
+import auth from '../../../firebase/firebaseConfig';
 
 const SignUp = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { singUp } = useContext(AuthContext)
 
     const signInForm = data => {
-        console.log(singUp)
-        singUp()
+        singUp(data.email, data.password)
+            .then(user => {
+                updateProfile(auth.currentUser, {
+                    displayName: `${data.name}`, photoURL: `${data.photo}`
+                }).then(() => {
+                    console.log(user)
+                }).catch((error) => {
+                    // An error occurred
+                    // ...
+                });
+            })
+            .catch(errors => {
+                console.log(errors);
+            })
         console.log(data)
     };
     return (
@@ -48,10 +62,8 @@ const SignUp = () => {
                         {errors.password && <span className=' text-red-600'>{errors.password?.message}</span>}
                     </div>
                     <Link to='/login' className=' font-bold mt-4 text-[#1b84fd]'>Login</Link>
-                    <input type="submit" value="Sign Up" className=' py-4 w-full bg-[#1565c0] hover:bg-[#1053a0] mt-5 text-lg font-bold text-white cursor-pointer' />
+                    <input type="submit" value="Sign Up" className=' py-4 mb-5 w-full bg-[#1565c0] hover:bg-[#1053a0] mt-5 text-lg font-bold text-white cursor-pointer' />
                 </form>
-                <div className="divider">OR</div>
-                <button className=' text-xl mb-3 font-bold text-white bg-slate-600 w-full py-4 hover:bg-slate-700 cursor-pointer'>Google</button>
             </div>
         </div>
     );
