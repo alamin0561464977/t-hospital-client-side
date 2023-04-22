@@ -26,8 +26,9 @@ const Navbar = () => {
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="m-1">Doctors</label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Item 1</a></li>
-                                    <li><a>Item 2</a></li>
+                                    <li><Link to='/'>Dr. John Allen</Link></li>
+                                    <li><Link to='/'>Dr. Janne Wilson</Link></li>
+                                    <li><Link to='/'>Dr. Adaline Becka</Link></li>
                                 </ul>
                             </div>
                         </Link>
@@ -35,15 +36,19 @@ const Navbar = () => {
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className=" m-1">Departments</label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Item 1</a></li>
-                                    <li><a>Item 2</a></li>
+                                    <li><Link to='/'>Cardiology</Link></li>
+                                    <li><Link to='/'>Dental</Link></li>
+                                    <li><Link to='/'>Neurologist</Link></li>
+                                    <li><Link to='/'>Pediatric</Link></li>
+                                    <li><Link to='/'>Urology</Link></li>
+                                    <li><Link to='/'>XRAY</Link></li>
                                 </ul>
                             </div>
                         </Link>
                         <Link to='/gallery'>Gallery</Link>
                         <Link to='/services'>Services</Link>
                         <Link to='/events'>Events</Link>
-                        <Link>Blogs</Link>
+                        <Link to='/blogs'>Blogs</Link>
                         <Link>Contact</Link>
                         {
                             user?.uid ? <Link><button onClick={() => logout()}>Log Out</button></Link> :

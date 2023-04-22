@@ -1,4 +1,5 @@
 import Services from "../Services/Services";
+import Blogs from "../pages/Blogs/Blogs";
 import Events from "../pages/Events/Events";
 import Gallery from "../pages/GalleryPage/Gallery";
 import Home from "../pages/HomePage/Home/Home";
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
             }
         ]
     }

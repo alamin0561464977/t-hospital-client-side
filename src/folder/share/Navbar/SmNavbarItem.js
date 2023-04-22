@@ -27,50 +27,48 @@ const SmNavbarItem = () => {
             </div>
             <div>
                 <div className=' justify-items-center my-auto lg:flex gap-3'>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link to='/'>Home</Link>
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500 flex justify-between items-center dropdown dropdown-hover'>
-                        <Link>
+                    <Link to='/'>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Home</div>
+                    </Link>
+                    <Link>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500 flex justify-between items-center dropdown dropdown-hover'>
                             <label tabIndex={0}>Doctors</label>
                             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><a>Item 1</a></li>
                                 <li><a>Item 2</a></li>
                             </ul>
-                        </Link>
-                        <FaChevronDown></FaChevronDown>
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500 flex justify-between items-center dropdown dropdown-hover'>
-                        <Link>
+                            <FaChevronDown></FaChevronDown>
+                        </div>
+                    </Link>
+                    <Link>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500 flex justify-between items-center dropdown dropdown-hover'>
                             <label tabIndex={0}>Departments</label>
                             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><a>Item 1</a></li>
                                 <li><a>Item 2</a></li>
                             </ul>
-                        </Link>
-                        <FaChevronDown></FaChevronDown>
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link to='/gallery'>Gallery</Link><br />
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link to='/services'>Services</Link><br />
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link to='/events'>Events</Link><br />
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link>Blogs</Link><br />
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        <Link>Contact</Link><br />
-                    </div>
-                    <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>
-                        {
-                            user?.uid ? <Link><button onClick={() => logout()}>Log Out</button></Link> :
-                                <Link to='/login'>Login</Link>
-                        }
-                    </div>
+                            <FaChevronDown></FaChevronDown>
+                        </div>
+                    </Link>
+                    <Link to='/gallery'>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Gallery</div>
+                    </Link>
+                    <Link to='/services'>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Services</div>
+                    </Link>
+                    <Link to='/events'>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Events</div>
+                    </Link>
+                    <Link>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Blogs</div>
+                    </Link>
+                    <Link>
+                        <div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Contact</div>
+                    </Link>
+                    {
+                        user?.uid ? <button className=' w-full text-left' onClick={() => logout()}><div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Log Out</div></button> :
+                            <Link className=' w-full' to='/login'><div className=' py-3 px-2 font-bold text-lg border-b-2 hover:border-sky-500'>Login</div></Link>
+                    }
                 </div>
             </div>
         </div>
